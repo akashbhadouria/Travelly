@@ -1,0 +1,151 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size:2.6rem;
+}
+
+li,
+button,
+label,
+input,
+p {
+  font-size:2rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+a {
+  color:white;
+  text-decoration:none;
+}
+
+/*  NAV Section with HERO */
+
+.main-head {
+  background:#131c27;
+  color:white;
+}
+nav {
+  min-height: 10vh;
+  padding:2rem;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content:space-around;
+  /* align-items: center; */
+  list-style: none;
+}
+
+#logo {
+  flex: 2 1 40rem;
+  font-family: 'Pattaya', sans-serif;
+  font-weight: lighter; 
+}
+
+.btn {
+  border: none;
+  background: linear-gradient(rgba(251, 251, 251, 0.8),transparent);
+  border-radius: 1rem;
+  color: white;
+  padding: 2rem 6rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.3),transparent),url('/img/landing-page.jpg');
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  color:rgba(255, 255, 255,0.8);
+  flex-wrap: wrap;
+}
+.hero .book-now {
+  /* padding: 1.8rem 5.4rem; */
+  margin: 2rem;
+}
+
+.hero h3 {
+   margin: 2rem;
+}
+.hero h2 {
+  margin: 2rem;
+  font-weight: bold ;
+}
+
+/* Locations Section */
+
+#locations {
+min-height: 100vh;
+
+background: linear-gradient(rgba(0,0,0,0.5),transparent),url('/img/new-york-page.png');
+
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+}
+
+.locations-head {
+  width: 90vw;
+  margin: auto;
+}
+.locations-head h2 {
+  padding: 2rem 0rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5rem;
+}
+.locations-head h3 {
+  padding: 4rem 0rem;
+}
+
+/*Media Query  */
+
+@media screen and (max-width:932px) {
+  html {
+    font-size: 45%;
+  }
+
+  nav {
+    text-align: center;
+  }
+  #logo {
+    padding: 2rem;
+  }
+}
+
