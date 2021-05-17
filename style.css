@@ -43,6 +43,9 @@ a {
 .main-head {
   background:#131c27;
   color:white;
+  position: sticky;
+  top: 0px;
+  z-index: 3;
 }
 nav {
   min-height: 10vh;
@@ -52,6 +55,7 @@ nav {
   margin: auto;
   align-items: center;
   flex-wrap: wrap;
+  
 }
 
 nav ul {
@@ -76,7 +80,31 @@ nav ul {
   padding: 2rem 6rem;
   font-size: 1.8rem;
   cursor: pointer;
+  transition: background 1s ease-in-out;
 }
+
+.btn:hover {
+  background: linear-gradient(rgba(16, 95, 141, 0.993),transparent);
+}
+
+.submit-btn {
+  border: none;
+  background: linear-gradient(rgb(155, 151, 152),transparent);
+  border-radius: 1rem;
+  width: 100%;
+  padding: 2.4rem 7rem;
+  font-size: 2.3rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 1s ease-in-out;
+  color: white;
+}
+.submit-btn:hover {
+  background: linear-gradient(rgba(16, 95, 141, 0.993),transparent);
+  font-size: bold;
+}
+
+
 
 /* Hero Section */
 
@@ -119,6 +147,8 @@ background-size: cover;
 background-position: center;
 display: flex;
 align-items: center;
+position: relative;
+overflow: hidden;
 }
 
 .locations-head {
@@ -134,6 +164,194 @@ align-items: center;
   padding: 4rem 0rem;
 }
 
+.clouds {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  
+}
+
+.moving-clouds-1 {
+  animation: Animated-cloud 3s infinite alternate ease-in-out;
+}
+
+.moving-clouds-2 {
+  top: 20%;
+  z-index: -1;
+  opacity: 0.5;
+  animation: Animated-cloud 3.5s infinite alternate ease-in-out;
+}
+
+/* Contact Section */
+
+#contact {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.3),transparent),url('/img/contact-mountain.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;  
+  color: white;
+  align-items: center;
+  justify-content: center;  
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  max-width: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 10vh;
+  margin: auto;
+  background: linear-gradient(rgba(106, 158, 243, 0.8),transparent);
+}
+.form-head  h2{
+  padding: 5rem;
+  text-align: center;
+}
+form .name-form{
+  padding: 2rem;
+  margin: 2rem;
+  /* min-width: 70vh; */
+}
+form .name-form label {
+  margin-right: 2rem;
+  font-size: 2.6rem;
+}
+form .email-form {
+  padding: 2rem;
+  margin: 2rem;
+}
+form .name-form input {
+  border: none;
+  padding: 0.6rem 3rem;
+  border: 1px solid rgb(113, 113, 245);
+  border-radius: 2rem;
+}
+form .email-form label {
+  margin-right: 2rem;
+  font-size: 2.6rem;
+}
+
+form .email-form input {
+  border: none;
+  padding: 0.6rem 3rem;
+  border: 1px solid rgb(113, 113, 245);
+  border-radius: 2rem;
+}
+
+
+/* Benifits Section */
+.benefits-head {
+  background: #343c44;
+  min-height:30vh;
+  padding: 3rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.benefits-head h3 {
+  padding: 1.2rem;
+}
+.cards {
+  display: flex;
+  text-align: center;
+  width: 90vw;
+  margin: auto;
+  min-height:70vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  flex: 1 1 35rem;
+  border: 1px solid black;
+  margin: 2rem 5rem;
+  min-height: 40vh;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.5), 0px 20px 20px rgba(0,0,0,0.1);
+}
+
+.card img {
+  max-width: 15%;
+}
+
+.card-icon {
+  background:#131c27; 
+  min-height: 10vh;
+  padding: 2rem;
+}
+
+.card h4 {
+  margin: 4rem 0rem 1rem 0rem;
+}
+.card p {
+  padding: 2rem;
+}
+
+footer {
+  color: white;
+  background: rgba(19, 28, 39, 1);
+}
+ footer .footer-wrapper {
+  display: flex;
+  max-width: 90vw;
+  margin: auto;
+  padding: 2rem;
+  align-items: center;
+  min-height: 10vh;
+  flex-wrap: wrap;
+}
+footer  h3 {
+  flex: 1 1 40rem;
+  font-family: 'Pattaya', sans-serif;
+  font-weight: lighter;
+}
+.footer-wrapper ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between; 
+  flex: 1 1 40rem;
+  align-items: center;
+}
+  
+
+ 
+ 
+/* .icons img{
+  height: 2rem; 
+} */
+/* footer h3 {
+  font-weight: bold;
+} */
+
+/* Animations */
+@keyframes Animated-cloud {
+  from { 
+    transform: translate(10%, -10%);
+    pointer-events: none;
+  }
+  to {
+    transform: translate(0%,0%);
+    pointer-events: none;
+  }
+/*   
+  0% {
+    background: lightblue;
+  }
+  50% {
+    background: rgb(255, 172, 146);
+  }
+  100% {
+    background: black;
+  } */
+}
+
+
 /*Media Query  */
 
 @media screen and (max-width:932px) {
@@ -147,5 +365,22 @@ align-items: center;
   #logo {
     padding: 2rem;
   }
+  .clouds {
+    height: 40rem;
+    pointer-events: none;
+  }
+  .moving-clouds-1 {
+    z-index: -1;
+  }
+  .moving-clouds-2 {
+    z-index: -2;
+  }
+  .locations {
+    text-align: center;
+  }
+  .locations-head h3 {
+    background: linear-gradient(rgba(2, 14, 46, 0.7),transparent); 
+    color: white;
+    padding: 2rem;
+  }
 }
-
