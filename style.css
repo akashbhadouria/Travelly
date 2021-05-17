@@ -383,4 +383,11 @@ footer  h3 {
     color: white;
     padding: 2rem;
   }
+  footer {
+    text-align: center;
+  }
+  .footer-wrapper h3{
+    margin: 2rem 0;
+  }
+
 }
